@@ -1,0 +1,55 @@
+// scss语法
+// $px是传入的px的值
+// $rem是基准font-size
+// $return返回计算结果
+@function px2rem($px) {
+    $rem: 37.5px;
+    @return ($px / $rem) + rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+.lizhi {
+    position: absolute;
+    left: 20%;
+    bottom: 0px;
+    margin: 0 auto;
+}
+.nezha > img {
+    width: px2rem(370px);
+    height: px2rem(201px);
+    margin: 0 auto;
+    display: table-cell;
+}
+.xiaoguo {
+    position: absolute;
+    left: 34%;
+    top: px2rem(30px);
+    margin: 0 auto;
+    animation:nezhatop 5s infinite;
+    -moz-animation:nezhatop 5s infinite; /* Firefox */
+    -webkit-animation:nezhatop 5s infinite; /* Safari and Chrome */
+    -o-animation:nezhatop 5s infinite;
+}
+.xiaoguo > img {
+    width: px2rem(120px);
+    height: px2rem(160px);
+}
+@keyframes nezhatop {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(0px, px2rem(20px), 0px);
+    }
+    51% {
+        transform: translate3d(0px, px2rem(20px), 0px);
+        /*如果多组变形 都属于 tarnsform 我们用空格隔开就好了*/
+    }
+    99% {
+        transform: translate3d(0, 0, 0);
+        /*如果多组变形 都属于 tarnsform 我们用空格隔开就好了*/
+    }
+}

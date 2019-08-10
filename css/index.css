@@ -1,41 +1,78 @@
+@charset "UTF-8";
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
-.nezha {
-    max-width: 100%;
+
+.lizhi {
+  position: absolute;
+  left: 20%;
+  bottom: 0px;
+  margin: 0 auto;
+  animation: lizhi 5s infinite;
+  -moz-animation: lizhi 5s infinite;
+  /* Firefox */
+  -webkit-animation: lizhi 5s infinite;
+  /* Safari and Chrome */
+  -o-animation: lizhi 5s infinite;
 }
+
 .nezha > img {
-    width: 100%;
-    height: 100%;
+  width: 9.86667rem;
+  height: 5.36rem;
+  margin: 0 auto;
+  display: table-cell;
 }
+
 .xiaoguo {
-    position: absolute;
-    left: 35%;
-    top: 30px;
-    margin: 0 auto;
-    animation:nezhatop 5s infinite;
-    -moz-animation:nezhatop 5s infinite; /* Firefox */
-    -webkit-animation:nezhatop 5s infinite; /* Safari and Chrome */
-    -o-animation:nezhatop 5s infinite;
+  position: absolute;
+  left: 34%;
+  top: 30px;
+  margin: 0 auto;
+  animation: nezhatop 5s infinite;
+  -moz-animation: nezhatop 5s infinite;
+  /* Firefox */
+  -webkit-animation: nezhatop 5s infinite;
+  /* Safari and Chrome */
+  -o-animation: nezhatop 5s infinite;
 }
+
 .xiaoguo > img {
-    width: 100%;
-    height: 100%;
+  width: 3.2rem;
+  height: 4.26667rem;
 }
+
 @keyframes nezhatop {
-    0% {
-        transform: translate3d(0, 0, 0);
-    }
-    50% {
-        transform: translate3d(0px, 20px, 0px);
-    }
-    51% {
-        transform: translate3d(0px, 20px, 0px);
-        /*如果多组变形 都属于 tarnsform 我们用空格隔开就好了*/
-    }
-    99% {
-        transform: translate3d(0, 0, 0);
-        /*如果多组变形 都属于 tarnsform 我们用空格隔开就好了*/
-    }
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0px, 0.53333rem, 0px);
+  }
+  51% {
+    transform: translate3d(0px, 0.53333rem, 0px);
+    /*如果多组变形 都属于 tarnsform 我们用空格隔开就好了*/
+  }
+  99% {
+    transform: translate3d(0, 0, 0);
+    /*如果多组变形 都属于 tarnsform 我们用空格隔开就好了*/
+  }
 }
+
+@keyframes lizhi {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0.53333rem, 0, 0px);
+  }
+  51% {
+    transform: translate3d(0.53333rem, 0, 0px);
+    /*如果多组变形 都属于 tarnsform 我们用空格隔开就好了*/
+  }
+  99% {
+    transform: translate3d(0, 0, 0);
+    /*如果多组变形 都属于 tarnsform 我们用空格隔开就好了*/
+  }
+}
+
